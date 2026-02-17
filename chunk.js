@@ -8,7 +8,7 @@ class Chunk {
 
         this.path = new Path2D();
 
-        this.chunkWorker = new Worker(new Blob());
+        this.chunkWorker = new Worker("chunkWorker.js");
 
         this.chunkWorker.postMessage({
             gridCoordX: gridCoordX,
@@ -69,4 +69,5 @@ class Chunk {
         
         ctx.drawImage(this.bakedImage, screenPos[0], screenPos[1]-chunkResolution*chunkSize);
 	}
+
 }
